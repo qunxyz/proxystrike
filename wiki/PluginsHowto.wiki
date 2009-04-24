@@ -42,7 +42,10 @@ class email_detect(AttackPlugin):
      
 So, let's explain the code:
 
-=== AttackPlugin constructor parameters: ===
+=== AttackPlugin constructor parameters ===
+
+You need to call the constructor of AttackPlugin to configure the plugin. Next i'll explain every parameter:
+
   * name (_string_): The name of the plugin shown in the GUI
   
   * variableSet (_boolean_): 
