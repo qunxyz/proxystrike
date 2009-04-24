@@ -2,6 +2,24 @@ This library was developed over pycurl library to make an abstraction of request
 
 Next i'll expose the reqresp API and some examples:
 
+=== examples ===
+{{{
+import reqresp
+
+a=Request()                        # Create a request object
+a.setUrl("http://www.google.es/")  # set google url
+a.perform()                        # performs the request
+print a.response.getContent()      # prints http://www.google.es/ HTML code
+
+a.setUrl("http://example.com/login.php")
+a.setVariablePOST("username","deepbit")   # add post variable username=deepbit
+a.setVariablePOST("password","1234")      # add post variable password=1234
+a.perform()  
+
+print a.response.getHeaders()      # print response headers
+print a.response.code              # print response code
+}}}
+
 === Variable Class ===
 {{{
 class Variable:
@@ -148,7 +166,7 @@ Methods:
         has_header (self,key):
         '''True: if header exists'''
 
-        getLocation (self'):
+        getLocation (self):
         '''Get Location value if 302 code is returned'''
 
         getHeaders (self):
