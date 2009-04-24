@@ -16,6 +16,27 @@ The requirements for develop a plugin are a few:
   * Overload the *process* method
   * _optional_: Overload getHTML and getXML to export reults
 
+Below I show a plugin example of an email collector plugin for Proxystrike:
 
+{{{class email_detect(AttackPlugin):
+	def __init__(self):
+		AttackPlugin.__init__(self,name="email detect",variableSet=False,iface=True,type="tree",fields=["Url","Email"])
+
+		self.emailre=re.compile("[a-z0-9_.-]+@[a-z0-9_.-]+",re.I)
+
+	def process(self,req):
+		html=req.response.getContent()
+
+		a=self.emailre.findall(html)
+
+		results=[]
+
+		for i in a:
+			results.append([i])
+
+		if a:   
+			self.putRESULTS([req.completeUrl,results]) }}}
+
+     
 
  
