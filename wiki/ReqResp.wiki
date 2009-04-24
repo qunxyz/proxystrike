@@ -112,12 +112,56 @@ Methods:
         '''access a header'''
 
         perform(self):
-        '''launchs the request'''
+        '''launchs the request. Response is stored in response attribute'''
 
         getAll (self):
         '''get the RAW request'''
 
         parseRequest (self,rawRequest,prot="http"):
         '''fills the request values parsing a raw request'''
+
+}}}
+
+=== Response Class ===
+{{{
+Attributes:
+    - protocol         # HTTP/1.1
+    - code                      # 200
+    - message                # OK
+ 
+Methods:
+        addHeader (self,key,value):
+        '''Adds a header'''
+
+        delHeader (self,key):
+        '''Delete header'''
+
+        addContent (self,text):
+        '''Add content to the response'''
+
+        __getitem__ (self,key):
+        '''get headers'''
+
+        getCookie (self):
+        '''return the cookie if set-cookie exists'''
+
+        has_header (self,key):
+        '''True: if header exists'''
+
+        getLocation (self'):
+        '''Get Location value if 302 code is returned'''
+
+        getHeaders (self):
+        '''return all headers'''
+
+        getContent (self):
+        '''get the body of the response (HTML)'''
+
+        getAll (self):
+        '''get the RAW response'''
+
+        parseResponse (self,rawResponse,type="curl"):
+        '''fills the response object through a given RAW text'''
+
 
 }}}
