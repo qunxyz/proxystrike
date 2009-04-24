@@ -78,7 +78,7 @@ A       B       C       D
 info1                   
 |_      info2   info3   info4						
 
-    String list passed to putRESULTS: ['info1',['info2','info3',info4']]
+    String list passed to putRESULTS: ['info1',['info2','info3','info4']]
 
 	
 A       B       C       D
@@ -86,7 +86,7 @@ info1
 |_      info2   info3   info4						
 |_	info21  info32  info43						
 
-    Data structure passed to putRESULTS: ['info1',['info2','info3',info4'],['info21','info32','info43']]
+    Data structure passed to putRESULTS: ['info1',['info2','info3','info4'],['info21','info32','info43']]
 }}}
 
   * text: When text widget is used, you must to pass a string ( Simple ;) )
