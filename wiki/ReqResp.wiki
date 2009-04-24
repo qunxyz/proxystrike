@@ -1,0 +1,40 @@
+This library was developed over pycurl library to make an abstraction of requests and responses.
+
+Next i'll expose the reqresp API and some examples:
+
+=== Variable Class ===
+{{{
+class Variable:
+        __init__(self,name,value="",extraInfo=""):
+        '''Constructor'''
+
+        restore(self):
+        '''If value is modified with _append()_ or _update()_ it can be restored'''
+
+        change(self,newval):
+        '''Changes variable value. _restore()_ has no effect
+
+        update(self,val):
+        '''Updates variable value'''
+
+        append(self,val):
+        '''append information in the variable's value'''
+
+        __str__(self):
+}}}
+
+=== VariablesSet Class ===
+
+{{{
+class VariablesSet:
+        names(self):
+            '''{}: variable names'''
+
+        existsVar(self,name):
+
+        addVariable(self,name,value="",extraInfo=""):
+
+
+        getVariable(self,name):
+
+}}}
