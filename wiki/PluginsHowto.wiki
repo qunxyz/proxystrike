@@ -18,7 +18,8 @@ The requirements for develop a plugin are a few:
 
 Below I show a plugin example of an email collector plugin for Proxystrike:
 
-{{{class email_detect(AttackPlugin):
+{{{
+class email_detect(AttackPlugin):
 	def __init__(self):
 		AttackPlugin.__init__(self,name="email detect",variableSet=False,iface=True,type="tree",fields=["Url","Email"])
 
@@ -35,7 +36,8 @@ Below I show a plugin example of an email collector plugin for Proxystrike:
 			results.append([i])
 
 		if a:   
-			self.putRESULTS([req.completeUrl,results]) }}}
+			self.putRESULTS([req.completeUrl,results]) 
+}}}
 
      
 
