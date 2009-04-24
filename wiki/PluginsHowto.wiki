@@ -44,7 +44,16 @@ So, let's explain the code:
 
 AttackPlugin constructor parameters:
   * name (_string_): The name of the plugin shown in the GUI
-  * variableSet: _Boolean_ 
+  
+  * variableSet (_boolean_): 
     * True: Requests with the same variable set are processed by the plugin only once. For example: index.php?a=1&b=2 - index.php?a=23&b=45. Only the first request will be processed. There are plugins that doesn't need to process all the requests, for examples SQL and XSS.
+    * False: All requests are processed by the plugin (only once obviously)
+  
+  * iface (_Boolean_): True: The plugin has interface. False: The plugin doesn't have interface.
+
+  * type (_string_): It can be "tree" or "text" depending on the interface widget you wish to use in the GUI.
+
+
+
 
  
