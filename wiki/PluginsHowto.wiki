@@ -3,4 +3,14 @@ This howto aims to show how to develop your own plugins for Proxystrike.
 All the plugins must be in the "plugins" folder.
 If you haven't got that folder, maybe your Proxystrike version is too old, so upgrade ;D.
 
-In this folder you can find two examples: [http://code.google.com/p/proxystrike/source/browse/trunk/plugins/demoplugin.readme demoplugin.readme] and [http://code.google.com/p/proxystrike/source/browse/trunk/plugins/demoplugin2.readme demoplugin2.readme].
+In this folder you can find two examples: [http://proxystrike.googlecode.com/svn/trunk/plugins/demoplugin.readme demoplugin.readme] and [http://proxystrike.googlecode.com/svn/trunk/plugins/demoplugin2.readme demoplugin2.readme].
+
+Below you can see the structure of Proxystrike plugin engine:
+
+[http://4.bp.blogspot.com/_-xXcbzWG3ug/SfHvtf3_u4I/AAAAAAAAAHg/jovD7Ff-niw/s1600-h/struct.png]
+
+Each request processed by the proxy is stored in a POOL and proccesed by every plugin 'enabled' in that very moment.
+
+
+
+ 
