@@ -1,5 +1,9 @@
 This library was developed over pycurl library to make an abstraction of requests and responses.
 
+You can download it [http://proxystrike.googlecode.com/svn/trunk/reqresp.py here].
+
+You also need the [http://proxystrike.googlecode.com/svn/trunk/TextParser.py  TextParser] library and [http://pycurl.sourceforge.net/ pycurl] module
+
 Next i'll expose the reqresp API and some examples:
 
 === examples ===
