@@ -4,7 +4,7 @@ Next i'll expose the reqresp API and some examples:
 
 === examples ===
 {{{
-import reqresp
+from reqresp import *
 
 a=Request()                        # Create a request object
 a.setUrl("http://www.google.es/")  # set google url
