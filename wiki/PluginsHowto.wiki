@@ -5,7 +5,7 @@ If you haven't got that folder, maybe your Proxystrike version is too old, so up
 
 In this folder you can find two examples: [http://proxystrike.googlecode.com/svn/trunk/plugins/demoplugin.readme demoplugin.readme] and [http://proxystrike.googlecode.com/svn/trunk/plugins/demoplugin2.readme demoplugin2.readme].
 
-Below you can see the structure of Proxystrike plugin engine:
+Below you can see the structure of ProxyStrike plugin engine:
 
 [http://4.bp.blogspot.com/_-xXcbzWG3ug/SfHvtf3_u4I/AAAAAAAAAHg/jovD7Ff-niw/s1600/struct.png]
 
@@ -16,7 +16,7 @@ The requirements for develop a plugin are a few:
   * Overload the *process* method
   * _optional_: Overload getHTML and getXML to export reults
 
-Below I show a plugin example of an email collector plugin for Proxystrike:
+Below I show a plugin example of an email collector plugin for Proxystrike. This plugin looks for emails in the responses (html) processed by the proxy and stores it in a tree widget in the ProxyStrike GUI:
 
 {{{
 class email_detect(AttackPlugin):
@@ -40,5 +40,11 @@ class email_detect(AttackPlugin):
 }}}
 
      
+So, let's explain the code:
+
+AttackPlugin constructor parameters:
+  * name (_string_): The name of the plugin shown in the GUI
+  * variableSet: _Boolean_ 
+    * True: Requests with the same variable set are only once processed by the plugins
 
  
