@@ -72,7 +72,7 @@ To store the results of the plugin you must use *_putRESULTS()_* method. The par
 
 Let's explain each case:
 
-  * tree: Imagine we have 4 fields (A,B,C,D):
+  * tree: You need to pass a string list, and only one format is allowed (not very flexible for the time being). Imagine we have 4 fields (A,B,C,D):
 {{{
 A       B       C       D
 info1                   
@@ -86,7 +86,7 @@ info1
 |_      info2   info3   info4						
 |_	info21  info32  info43						
 
-    Data structure passed to putRESULTS: ['info1',['info2','info3','info4'],['info21','info32','info43']]
+    String list passed to putRESULTS: ['info1',['info2','info3','info4'],['info21','info32','info43']]
 }}}
 
   * text: When text widget is used, you must to pass a string ( Simple ;) )
