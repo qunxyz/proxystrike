@@ -11,6 +11,11 @@ Below you can see the structure of ProxyStrike plugin engine:
 
 Each request processed by the proxy is stored in a POOL and proccesed by every plugin 'enabled' in that very moment.
 
+Features:
+  * each plugin has it's own thread controller
+  * each plugin has it's own cache, implemented for not process the same requests innecessarely
+  * A plugin can export to HTML and XML formats
+
 The requirements for develop a plugin are a few:
   * Inherit from *AttackPlugin*
   * Overload the *process* method
