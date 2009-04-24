@@ -1,0 +1,2 @@
+This howto aims to show how to develop your own plugins for 
+Proxystrike 
