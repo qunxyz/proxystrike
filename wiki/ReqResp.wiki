@@ -12,7 +12,7 @@ class Variable:
         '''If value is modified with _append()_ or _update()_ it can be restored'''
 
         change(self,newval):
-        '''Changes variable value. _restore()_ has no effect
+        '''Changes variable value. _restore()_ has no effect'''
 
         update(self,val):
         '''Updates variable value'''
