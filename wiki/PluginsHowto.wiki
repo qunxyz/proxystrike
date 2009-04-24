@@ -53,6 +53,7 @@ AttackPlugin constructor parameters:
 
   * type (_string_): It can be "tree" or "text" depending on the interface widget you wish to use in the GUI.
 
+  * fields (_string`[]_):
 
 
 
