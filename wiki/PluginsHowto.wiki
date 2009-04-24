@@ -42,7 +42,7 @@ class email_detect(AttackPlugin):
      
 So, let's explain the code:
 
-=== AttackPlugin constructor parameters:===
+= AttackPlugin constructor parameters:=
   * name (_string_): The name of the plugin shown in the GUI
   
   * variableSet (_boolean_): 
