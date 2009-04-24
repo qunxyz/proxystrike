@@ -1,2 +1,6 @@
-This howto aims to show how to develop your own plugins for 
-Proxystrike 
+This howto aims to show how to develop your own plugins for Proxystrike.
+
+All the plugins must be in the "plugins" folder.
+If you haven't got that folder, maybe your Proxystrike version is too old, so upgrade ;D.
+
+In this folder you can find two examples: [http://code.google.com/p/proxystrike/source/browse/trunk/plugins/demoplugin.readme demoplugin.readme] and [http://code.google.com/p/proxystrike/source/browse/trunk/plugins/demoplugin2.readme demoplugin2.readme].
