@@ -11,6 +11,11 @@ Below you can see the structure of Proxystrike plugin engine:
 
 Each request processed by the proxy is stored in a POOL and proccesed by every plugin 'enabled' in that very moment.
 
+The requirements for develop a plugin are a few:
+  * Inherit from *AttackPlugin*
+  * Overload the *process* method
+  * _optional_: Overload getHTML and getXML to export reults
+
 
 
  
