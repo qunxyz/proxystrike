@@ -18,7 +18,7 @@ class Variable:
         '''Updates variable value'''
 
         append(self,val):
-        '''append information in the variable's value'''
+        '''append information in the variable`s value'''
 
         __str__(self):
 }}}
