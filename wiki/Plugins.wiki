@@ -1,5 +1,4 @@
-#summary One-sentence summary of this page.
-
+#How to create plugins
 = Creating plugins =
 
 Add your content here.
