@@ -1,4 +1,0 @@
-#How to create plugins
-= Creating plugins =
-
-Add your content here.
