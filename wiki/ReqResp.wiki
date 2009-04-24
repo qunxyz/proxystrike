@@ -21,6 +21,7 @@ class Variable:
         '''append information in the variable`s value'''
 
         __str__(self):
+        '''string representation of the variable'''
 }}}
 
 === VariablesSet Class ===
@@ -28,13 +29,95 @@ class Variable:
 {{{
 class VariablesSet:
         names(self):
-            '''{}: variable names'''
+        '''{}: returns variable names in a hash'''
 
         existsVar(self,name):
+        '''True if variable name `name` exists in the set'''
 
         addVariable(self,name,value="",extraInfo=""):
+        '''Add a variable to the set'''
 
 
         getVariable(self,name):
+        '''Returns variable given a variable name'''
+
+}}}
+
+=== Request Class ===
+{{{
+Attributes:
+    - urlWithoutVariables
+    - pathWithVariables
+    - completeUrl
+    - finalUrl
+    - urlWithoutPath
+    - path
+    - postdata
+
+Methods:
+
+        __str__(self):
+        '''String representation of the request'''
+
+        getXML(self,obj):
+        '''Xml representation of the request'''
+
+        getHost(self):
+        '''Host, eg: www.google.com'''
+
+        setUrl (self, urltmp):
+        '''sets an url to perform the request'''
+
+        setProxy (self,prox):
+        '''sets a proxy to perform the request'''
+
+        setFollowLocation(self,value):
+        '''True: if response is 302 follow's the location header'''
+
+        setConnTimeout (self,time):
+        '''Timeout in seconds for the connection'''
+
+        setTotalTimeout (self,time):
+        '''Timeout in seconds for total transfer'''
+
+        setAuth (self,method,string):
+        '''sets auth string (user:passwd) for a given method (digest,basic,ntlm)
+
+        getAuth (self):
+
+        existsGETVar(self,key):
+
+        existPOSTVar(self,key):
+
+        setVariablePOST (self,key,value):
+
+        setVariableGET (self,key,value):
+
+        getGETVars(self):
+        '''return all variables passed through the URL'''
+
+        getPOSTVars(self):
+        '''return all variables passed through the body'''
+
+        setPostData (self,pd,boundary=None):
+        '''set post data passed via string'''
+
+        addHeader (self,key,value):
+        '''add a header to the request'''
+
+        delHeader (self,key):
+        '''delete a header'''
+
+        __getitem__ (self,key):
+        '''access a header'''
+
+        perform(self):
+        '''launchs the request'''
+
+        getAll (self):
+        '''get the RAW request'''
+
+        parseRequest (self,rawRequest,prot="http"):
+        '''fills the request values parsing a raw request'''
 
 }}}
